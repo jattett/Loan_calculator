@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" 
+    href="style.css">
+    
+    <title>대출 이자 계산기</title>
+</head>
+<body>
+    <div class="container">
+    <main>
+        <header class="tit-Text">
+            <h1>대출 이자 계산기</h1>
+        </header>
+
+        <section class="loan-nub-box">
+            <h2 class="cover-up">대출 금액 입력</h2>
+                <form>
+                <p class="roan-money">대출금액 : <input class="inp-money" type="number" placeholder="예)5,000,000" required value=""> 원</p>
+                <p class="roan-day">대출기간 : <input
+                    class="inp-date" type="number" placeholder="예) 25") 25" required value="" >개월</p>
+                <p class="roan-int">대출이율 : <input class="inp-roan" type="number" placeholder="예) 5.3" required value=""> %</p>
+            </form>
+            <p class="end-text">2022년 기준 법정 최고 이자는 20% 입니다.</p>
+        </section>
+
+        <section class="loading-img">
+            <h2 class="cover-up">로딩 이미지</h2>
+            <img src="./img/loading.png" alt="로딩사진">
+        </section>
+        
+        <section class="loan-check">
+        <h2 class="cover-up">대출 종류 체크박스 및 버튼</h2>
+        <ul>
+        <li><input id="first-radio"type="radio" name="money-check" value="만기일시상환체크"><span>만기일시상환</span></li>
+        <li><input id="second-radio" type="radio" name="money-check" value="원리균등상환체크"><span>원리균등상환</span></li>
+        <li><input id="third-radio" type="radio" name="money-check" value="원리금균등상환체크"><span>원리금균등상환</span></li>
+        </ul>
+        </section>
+
+        <section class="loan-result">
+        <h2 class="cover-up">결과버튼</h2>
+        <button class="reset-btn" type="reset">초기화</button>
+        <button class="result-btn" type="submit">매월 납부 할 이자 계산하기</button>
+        </section>
+
+        <footer>
+            <p>무리한 대출은 금합니다.</p>
+            <img src="./img/log.png" alt="로고">
+            <span>Copyright ⓒ 본서비스는 "강규민","이지운" 에게 저작권이 있으며 <br />
+                무단 사용시 처벌을 내릴것입니다. 
+            </span>
+        </footer>
+    </main>
+
+    </div>
+    <div id="modal">
+        <table>
+            <th>
+                <td>회차</td>
+                <td>납입금액</td>
+                <td>이자</td>
+                <td>월상환금</td>
+                <td>대출잔금</td>
+            </th>
+            <tr class="li-box">
+                <td class="li-num"></td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+            </tr>
+        </table>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
